@@ -8,13 +8,12 @@ def post_new_order(body):
 
 
 
-response = post_new_order(data.body).json()
-order_track = response.get('track')
+#response = post_new_order(data.body).json()
+#order_track = response.get('track')
 
 
-def get_order_by_number():
+def get_order_by_number(order_track):
     return requests.get(configuration.URL_SERVICE + configuration.CHECK_USER_ORDER + str(order_track), headers=data.headers)
-
 
 
 
